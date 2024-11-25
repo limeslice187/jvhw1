@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <style>
+        /* Add styles directly for simplicity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #f3f3f3;
+            background-size: cover;
+            background-position: center;
+            line-height: 300px;
+            color: #555;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .preview {
+            width: 100px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .preview:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="image">Hover over an image below to display here.</div>
+
+    <!-- Add preview images -->
+    <img class="preview" src="https://via.placeholder.com/300/FF0000/FFFFFF?text=Red" 
+         alt="Red Image" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="preview" src="https://via.placeholder.com/300/00FF00/FFFFFF?text=Green" 
+         alt="Green Image" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="preview" src="https://via.placeholder.com/300/0000FF/FFFFFF?text=Blue" 
+         alt="Blue Image" onmouseover="upDate(this)" onmouseout="undo()">
+
+    <script src="script.js"></script>
+</body>
+</html>
